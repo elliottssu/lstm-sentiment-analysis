@@ -1,4 +1,4 @@
-from encoder import Model, sst_binary, model_train, model_predict
+from encoder import Model, sst_binary, model_train, model_predict, model_load
 
 # 选择语言中文还是英文
 languageType = ''
@@ -35,6 +35,8 @@ print('=> Succeeds in translating swords into word Embeddedness and starting to 
 
 accuracy = model_train(x, y, wi, language, max_length, tr_num, va_num)  #训练模型
 print('=> accuracy: ', accuracy*100, '%')
+
+# model_load(language) #如果模型训练好了，调用此方法直接加载模型，不需要再训练
 
 while True:
     sentence = input("Please enter a single sentence to predict:")

@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import jieba
 
-from keras.models import Sequential
+from keras.models import Sequential, load_model
 from keras.layers import Dense, Activation, Dropout, Embedding
 from keras.layers import LSTM
 
@@ -40,6 +40,12 @@ def model_train(x, y, wi, language, sentence_max_length=100, tr_num=17000, va_nu
     model.save('model_' + language + '.h5')
     
     return score[1]
+
+
+#加载已经训练好的模型
+def model_load(language):
+    global model
+    model = load_model('model_' + language + '.h5')
 
 
 #单个句子的预测函数
