@@ -33,7 +33,7 @@ print('=> Succeeds in loading <' + language + '> file and starting to translate 
 x, y, wi = model.transform(all_data)  #将每个句子里的词转化成词频索引值
 print('=> Succeeds in translating swords into word Embeddedness and starting to train the model process······')
 
-accuracy = model_train(x, y, wi, language, max_length, tr_num, va_num)  #训练模型
+accuracy = model_train(x, y, wi, language, max_length, tr_num, va_num)  #训练模型  (如果已经有训练好的模型，这行代码注释掉)
 print('=> accuracy: ', accuracy*100, '%')
 
 # model_load(language) #如果模型训练好了，调用此方法直接加载模型，不需要再训练
