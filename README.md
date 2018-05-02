@@ -7,7 +7,7 @@ sentiment analysis with chinese and english
 
 #### 情感分析工具keras，语言包括中文和英文
 
-开始之前，你需要对深度学习原理有比较深刻的了解，lstm的原理，调参优化细节，keras基本知识的掌握。
+开始之前，你需要对深度学习原理有比较深刻的了解，lstm的原理，调参优化细节，keras基本知识的掌握。Python 版本 3.6.5
 
 **1. 准备语料**
 
